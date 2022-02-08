@@ -23,15 +23,21 @@ void output(int a,int b,int c,int isscalene)
 {
   if (isscalene==1)
   {
-    printf("Triangle with sides %d,%d and %d is scalene",a,b,c,isscalene);
+    printf("Triangle with sides %d,%d and %d is scalene",a,b,c);
   }
   else
   {
-    printf("It isnt scalene");
+    printf("It is not scalene");
   }
 }
 
 int main()
 {
-  
+  int a,b,c,s;
+  a=input_side();
+  b=input_side();
+  c=input_side();
+  s=check_scalene(a,b,c);
+  output(a,b,c,s);
+  return 0;
 }
